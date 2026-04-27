@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Storybook</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="reader-container">
+
+    <div class="reader-image-panel">
+      <img id="page-image" src="" alt="Story illustration">
+    </div>
+
+    <div class="reader-text-panel">
+      <a class="back-link" href="index.html">← All stories</a>
+      <div class="reader-story-title" id="story-title"></div>
+      <p class="reader-page-text" id="page-text">Loading…</p>
+      <nav class="reader-nav">
+        <button class="nav-btn" id="btn-prev" aria-label="Previous page">‹</button>
+        <span class="page-counter" id="page-counter"></span>
+        <button class="nav-btn" id="btn-next" aria-label="Next page">›</button>
+      </nav>
+    </div>
+
+  </div>
+  <script src="js/config.js"></script>
+  <script src="js/reader.js"></script>
+</body>
+</html>
