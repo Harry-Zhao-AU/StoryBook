@@ -35,6 +35,11 @@ async function init() {
   try {
     const story = await loadStory(storyId);
     pages = story.pages;
+    if (!Array.isArray(pages) || pages.length === 0) {
+      document.getElementById('page-text').textContent =
+        'This story has no pages yet.';
+      return;
+    }
     document.title = story.title + ' — My Storybook';
     document.getElementById('story-title').textContent = story.title;
     renderPage();
