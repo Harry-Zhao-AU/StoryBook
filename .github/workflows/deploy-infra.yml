@@ -1,0 +1,24 @@
+name: Deploy Infrastructure
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'infra/**'
+  workflow_dispatch:
+
+jobs:
+  deploy-infra:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create Resource Group
+        run: az group create --name rg-storybook --location australiaeast
+
+      - name: Deploy Bicep
+        run: |
+          az deployment group create \
+            --resource-group rg-storybook \
+            --template-file infra/main.bicep \
+            --parameters infra/main.bicepparam
