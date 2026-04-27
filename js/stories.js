@@ -1,8 +1,18 @@
+function esc(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
 async function loadStories() {
   const res = await fetch(`${BLOB_BASE}/stories.json`);
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const data = await res.json();
-  return data.stories;
+  const stories = data.stories;
+  if (!Array.isArray(stories)) throw new Error('Invalid stories format');
+  return stories;
 }
 
 function renderList(stories) {
@@ -13,11 +23,11 @@ function renderList(stories) {
         <img
           class="story-cover"
           src="${BLOB_BASE}/${encodeURIComponent(story.id)}/${encodeURIComponent(story.cover)}"
-          alt="${story.title} cover"
+          alt="${esc(story.title)} cover"
           onerror="this.style.visibility='hidden'"
         >
         <div class="story-info">
-          <div class="story-title">${story.title}</div>
+          <div class="story-title">${esc(story.title)}</div>
           <div class="story-pages">${story.pages} page${story.pages === 1 ? '' : 's'}</div>
         </div>
         <div class="story-chevron">›</div>
