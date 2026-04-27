@@ -1,0 +1,9 @@
+{
+  "title": "The Pirate Adventure",
+  "pages": [
+    { "image": "page1.png", "text": "Once upon a time, a brave pirate sailed the seven seas in search of adventure." },
+    { "image": "page2.png", "text": "One stormy night, he found a mysterious map hidden inside an old bottle." },
+    { "image": "page3.png", "text": "After many days at sea, he arrived at a tiny island covered in palm trees." },
+    { "image": "page4.png", "text": "He dug up the treasure and shared every golden coin with his crew. The End." }
+  ]
+}

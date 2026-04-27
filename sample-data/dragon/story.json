@@ -1,0 +1,7 @@
+{
+  "title": "The Dragon's Tale",
+  "pages": [
+    { "image": "page1.png", "text": "High in the mountains lived a small dragon who was afraid of fire." },
+    { "image": "page2.png", "text": "One day she sneezed — and lit up the whole sky with the most beautiful fireworks. The End." }
+  ]
+}

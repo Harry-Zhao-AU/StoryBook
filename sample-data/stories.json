@@ -1,0 +1,16 @@
+{
+  "stories": [
+    {
+      "id": "pirate",
+      "title": "The Pirate Adventure",
+      "cover": "page1.png",
+      "pages": 4
+    },
+    {
+      "id": "dragon",
+      "title": "The Dragon's Tale",
+      "cover": "page1.png",
+      "pages": 2
+    }
+  ]
+}
