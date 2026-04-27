@@ -7,7 +7,7 @@ function esc(str) {
 }
 
 async function loadStories() {
-  const res = await fetch(`${BLOB_BASE}/stories.json`);
+  const res = await fetch(`${BLOB_BASE}/stories.json${BLOB_SAS}`);
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const data = await res.json();
   const stories = data.stories;
@@ -22,7 +22,7 @@ function renderList(stories) {
       <a class="story-row" href="reader.html?story=${encodeURIComponent(story.id)}">
         <img
           class="story-cover"
-          src="${BLOB_BASE}/${encodeURIComponent(story.id)}/${encodeURIComponent(story.cover)}"
+          src="${BLOB_BASE}/${encodeURIComponent(story.id)}/${encodeURIComponent(story.cover)}${BLOB_SAS}"
           alt="${esc(story.title)} cover"
           onerror="this.style.visibility='hidden'"
         >

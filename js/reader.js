@@ -3,7 +3,7 @@ let currentPage = 0;
 let storyId = '';
 
 async function loadStory(id) {
-  const res = await fetch(`${BLOB_BASE}/${encodeURIComponent(id)}/story.json`);
+  const res = await fetch(`${BLOB_BASE}/${encodeURIComponent(id)}/story.json${BLOB_SAS}`);
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   return res.json();
 }
@@ -11,7 +11,7 @@ async function loadStory(id) {
 function renderPage() {
   const page = pages[currentPage];
   document.getElementById('page-image').src =
-    `${BLOB_BASE}/${encodeURIComponent(storyId)}/${encodeURIComponent(page.image)}`;
+    `${BLOB_BASE}/${encodeURIComponent(storyId)}/${encodeURIComponent(page.image)}${BLOB_SAS}`;
   document.getElementById('page-text').textContent = page.text;
   document.getElementById('page-counter').textContent =
     `${currentPage + 1} / ${pages.length}`;

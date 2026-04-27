@@ -1,0 +1,9 @@
+{
+  "title": "Apple is Missing",
+  "pages": [
+    { "image": "page1.png", "text": "One morning, Lily opened her lunchbox and her favourite red apple was gone!" },
+    { "image": "page2.png", "text": "She looked under her bed, behind the sofa, and in the garden. No apple anywhere." },
+    { "image": "page3.png", "text": "Then she spotted her dog Max in the corner, with something red and shiny by his paw." },
+    { "image": "page4.png", "text": "Max had found the apple rolling away and kept it safe. Lily laughed and gave him a big hug. The End." }
+  ]
+}

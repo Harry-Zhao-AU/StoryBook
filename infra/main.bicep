@@ -19,8 +19,20 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2023-01-01' = {
   sku: { name: 'Standard_LRS' }
   kind: 'StorageV2'
   properties: {
-    allowBlobPublicAccess: true
+    allowBlobPublicAccess: false
     minimumTlsVersion: 'TLS1_2'
+    supportsHttpsTrafficOnly: true
+    allowSharedKeyAccess: true
+    encryption: {
+      requireInfrastructureEncryption: true
+      services: {
+        blob: { enabled: true }
+        file: { enabled: true }
+        table: { enabled: true }
+        queue: { enabled: true }
+      }
+      keySource: 'Microsoft.Storage'
+    }
   }
 }
 
@@ -45,12 +57,12 @@ resource blobService 'Microsoft.Storage/storageAccounts/blobServices@2023-01-01'
 resource storiesContainer 'Microsoft.Storage/storageAccounts/blobServices/containers@2023-01-01' = {
   parent: blobService
   name: 'stories'
-  properties: { publicAccess: 'Blob' }
+  properties: { publicAccess: 'None' }
 }
 
 resource staticWebApp 'Microsoft.Web/staticSites@2023-01-01' = {
   name: '${appName}-swa'
-  location: location
+  location: 'eastasia'
   sku: { name: 'Free', tier: 'Free' }
   properties: {}
 }

@@ -7,10 +7,10 @@
       "pages": 4
     },
     {
-      "id": "dragon",
-      "title": "The Dragon's Tale",
+      "id": "apple",
+      "title": "Apple is Missing",
       "cover": "page1.png",
-      "pages": 2
+      "pages": 4
     }
   ]
 }
