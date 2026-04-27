@@ -16,6 +16,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Generate config.js
+        run: |
+          echo "const BLOB_BASE = '${{ secrets.BLOB_BASE }}';" > js/config.js
+          echo "const BLOB_SAS = '${{ secrets.BLOB_SAS }}';" >> js/config.js
+
       - name: Deploy to Azure Static Web Apps
         uses: azure/static-web-apps-deploy@v1
         with:
