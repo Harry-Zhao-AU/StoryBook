@@ -1,0 +1,175 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Georgia', serif;
+  background: #fdf6e3;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* ── Listing page ─────────────────────────────────── */
+
+.listing-header {
+  padding: 24px 20px 12px;
+  text-align: center;
+  font-size: 1.6rem;
+  color: #5a3e1b;
+  border-bottom: 1px solid #e8d9b5;
+}
+
+.story-list {
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 8px 16px;
+}
+
+.story-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 8px;
+  border-bottom: 1px solid #e8d9b5;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.story-row:hover { background: #f5ead0; border-radius: 8px; }
+
+.story-cover {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+  background: #e8d9b5;
+}
+
+.story-info { flex: 1; }
+
+.story-title {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: #3a2a0e;
+}
+
+.story-pages {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 2px;
+}
+
+.story-chevron {
+  font-size: 1.4rem;
+  color: #b08040;
+}
+
+/* ── Reader page ──────────────────────────────────── */
+
+.reader-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.reader-image-panel {
+  flex: 0 0 60%;
+  background: #1a1412;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.reader-image-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.reader-text-panel {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 28px 24px;
+  background: #fdf6e3;
+  overflow-y: auto;
+}
+
+.reader-story-title {
+  font-size: 1rem;
+  color: #b08040;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 20px;
+}
+
+.reader-page-text {
+  font-size: 1.35rem;
+  line-height: 1.75;
+  color: #3a2a0e;
+  flex: 1;
+}
+
+.reader-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.nav-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: #b08040;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.nav-btn:disabled { opacity: 0.3; cursor: default; }
+.nav-btn:not(:disabled):hover { background: #8a6030; }
+
+.page-counter {
+  font-size: 0.9rem;
+  color: #888;
+  min-width: 60px;
+  text-align: center;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 0.85rem;
+  color: #b08040;
+  text-decoration: none;
+}
+
+.back-link:hover { text-decoration: underline; }
+
+/* ── Error / loading states ───────────────────────── */
+
+.status-message {
+  padding: 40px;
+  text-align: center;
+  color: #888;
+  font-size: 1rem;
+}
+
+/* ── Mobile: stack vertically ─────────────────────── */
+
+@media (max-width: 700px) {
+  .reader-container { flex-direction: column; height: auto; }
+  .reader-image-panel { flex: none; height: 55vw; }
+  .reader-text-panel { flex: none; padding: 20px 16px 16px; }
+  .reader-page-text { font-size: 1.1rem; }
+}
