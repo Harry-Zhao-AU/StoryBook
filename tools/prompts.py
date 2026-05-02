@@ -17,9 +17,10 @@ def storyboard_prompt(scene_descriptions: list[str]) -> str:
     scenes = "\n".join(
         f"Panel {i + 1}: {desc}" for i, desc in enumerate(scene_descriptions)
     )
+    n = len(scene_descriptions)
     return (
-        f"12-panel storyboard grid for a children's story. "
-        f"Arrange all panels in a 4x3 grid, each labelled with its number. "
+        f"{n}-panel storyboard grid for a children's story. "
+        f"Arrange all {n} panels in a grid, each labelled with its number. "
         f"Maintain consistent character appearance throughout. "
         f"{STYLE}.\n\n{scenes}"
     )

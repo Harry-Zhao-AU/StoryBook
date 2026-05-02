@@ -14,12 +14,12 @@ from PIL import Image
 from state import get_output_dir, load_state, save_state, load_story, save_brief
 from prompts import character_ref_prompt, storyboard_prompt, panel_prompt
 
-load_dotenv(Path(__file__).parent / ".env")
-
-
 def open_image(path: Path) -> None:
     if platform.system() == "Windows":
-        os.startfile(str(path))
+        try:
+            os.startfile(str(path))
+        except OSError:
+            print(f"(Could not open {path.name} automatically — open it manually)")
     elif platform.system() == "Darwin":
         subprocess.run(["open", str(path)])
     else:
@@ -127,6 +127,7 @@ def run_phase3(client: OpenAI, state: dict, story: dict, output_dir: Path) -> No
 
 def main(argv: list[str] | None = None) -> None:
     import argparse
+    load_dotenv(Path(__file__).parent / ".env")
 
     parser = argparse.ArgumentParser(description="Generate storybook illustrations via GPT-Image-2")
     parser.add_argument("--id", required=True, help="Story ID (e.g. pirate)")
@@ -161,7 +162,11 @@ def main(argv: list[str] | None = None) -> None:
         print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)
 
-    client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
+    api_key = os.environ.get("OPENAI_API_KEY")
+    if not api_key:
+        print("Error: OPENAI_API_KEY is not set. Add it to tools/.env", file=sys.stderr)
+        sys.exit(1)
+    client = OpenAI(api_key=api_key)
 
     phase = state["phase"]
 
