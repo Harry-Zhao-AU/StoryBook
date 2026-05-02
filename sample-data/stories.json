@@ -2,9 +2,9 @@
   "stories": [
     {
       "id": "pirate",
-      "title": "The Pirate Adventure",
+      "title": "Ellie and Abbie's Pirate Adventure",
       "cover": "page1.png",
-      "pages": 4
+      "pages": 12
     },
     {
       "id": "apple",

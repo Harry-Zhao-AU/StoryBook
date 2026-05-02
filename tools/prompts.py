@@ -1,14 +1,19 @@
 STYLE = (
-    "watercolour children's book illustration, soft watercolour style, "
-    "gentle colours, hand-painted texture"
+    "Studio Ghibli anime style, rich oil-painting-like texture with visible brushstrokes, "
+    "dramatic cinematic golden-hour lighting with deep warm shadows, "
+    "detailed fabric and fur textures, expressive Ghibli characters, "
+    "deep atmospheric perspective, vivid saturated colour palette"
 )
 
 
 def character_ref_prompt(character_description: str) -> str:
     return (
-        f"Character reference sheet of {character_description}. "
-        f"Show front view, 3/4 view, and side profile arranged side by side. "
-        f"Maintain exact likeness to the reference photo. "
+        f"Character reference sheet for a children's storybook. "
+        f"Show all characters from this description: {character_description}. "
+        f"For each character, show front view, 3/4 view, and side profile arranged side by side. "
+        f"Print each character's name as a label underneath their views. "
+        f"Maintain exact likeness to the reference photo for the human character. "
+        f"Clean white background, thin border separating each character section. "
         f"{STYLE}."
     )
 

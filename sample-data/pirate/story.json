@@ -1,36 +1,65 @@
 {
-  "title": "The Pirate Adventure",
+  "title": "Ellie and Abbie's Pirate Adventure",
   "music": "music.mp3",
   "pages": [
     {
       "image": "page1.png",
-      "text": "Once upon a time, a brave pirate sailed the seven seas in search of adventure.",
+      "text": "One misty morning, Ellie found a glass bottle on the beach. Inside was an old treasure map!",
       "duration": 6000
     },
     {
       "image": "page2.png",
-      "text": "One stormy night, he found a mysterious map hidden inside an old bottle.",
-      "dialogue": [
-        { "character": "Captain Jack", "text": "What's this? A map… but where does it lead?" },
-        { "character": "First Mate", "text": "To treasure, Captain — more than you can imagine!" }
-      ],
-      "duration": 7500
+      "text": "Ellie's heart leaped. She and Abbie jumped aboard their ship and set sail!",
+      "duration": 6000
     },
     {
       "image": "page3.png",
-      "text": "After many days at sea, he arrived at a tiny island covered in palm trees.",
-      "dialogue": [
-        { "character": "Captain Jack", "text": "Land ahoy! That's the island on the map!" }
-      ],
+      "text": "CRASH! A huge storm hit their ship. Ellie grabbed the wheel and held on tight!",
       "duration": 6000
     },
     {
       "image": "page4.png",
-      "text": "He dug up the treasure and shared every golden coin with his crew. The End.",
-      "dialogue": [
-        { "character": "Captain Jack", "text": "Every soul gets an equal share. That's the pirate's code!" },
-        { "character": "Crew", "text": "Hurrah for Captain Jack! The finest pirate on the seas!" }
-      ],
+      "text": "'Land ahoy!' squawked Polly. There, glowing in the golden sunrise, was a magical island!",
+      "duration": 6000
+    },
+    {
+      "image": "page5.png",
+      "text": "Ellie anchored the ship and splashed ashore. She and Abbie laughed as the warm waves tickled their feet!",
+      "duration": 7000
+    },
+    {
+      "image": "page6.png",
+      "text": "The jungle glowed with magical light. Curious little creatures with glowing eyes peeked from every leaf!",
+      "duration": 7000
+    },
+    {
+      "image": "page7.png",
+      "text": "Deep in the jungle, they found a huge stone temple. Golden symbols glowed on every wall!",
+      "duration": 6000
+    },
+    {
+      "image": "page8.png",
+      "text": "A secret door opened with a rumble. Ellie and Abbie gasped — the whole room sparkled with treasure!",
+      "duration": 7000
+    },
+    {
+      "image": "page9.png",
+      "text": "'Pirates! Pirates!' squawked Polly. Five silly pirates burst out of the jungle, waving their wobbly old swords!",
+      "duration": 7000
+    },
+    {
+      "image": "page10.png",
+      "text": "Ellie held up the map. \"The real treasure is over THERE!\" The silly pirates believed her and ran — and Abbie chased them all the way to the beach!",
+      "duration": 8000
+    },
+    {
+      "image": "page11.png",
+      "text": "Back on the beach at sunset, Ellie slowly opened the treasure chest. Her eyes went wide — it was the most beautiful thing she had ever seen!",
+      "duration": 8000
+    },
+    {
+      "image": "page12.png",
+      "text": "That night, Ellie and Abbie sailed home under a million stars. The greatest treasure of all was the adventure they had shared together.",
       "duration": 8000
     }
   ]
