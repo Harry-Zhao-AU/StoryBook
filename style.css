@@ -156,6 +156,212 @@ body {
 
 .back-link:hover { text-decoration: underline; }
 
+/* ── Play Story button ────────────────────────────── */
+
+.play-story-btn {
+  display: block;
+  width: 100%;
+  padding: 11px;
+  background: #b08040;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Georgia', serif;
+  cursor: pointer;
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+  transition: background 0.15s;
+}
+
+.play-story-btn:hover { background: #8a6030; }
+
+/* ── Player overlay ───────────────────────────────── */
+
+.player-overlay {
+  position: fixed;
+  inset: 0;
+  background: #0d0b09;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.player-overlay.hidden { display: none; }
+
+.player-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: rgba(0, 0, 0, 0.55);
+  flex-shrink: 0;
+}
+
+.player-story-title {
+  color: #e0c080;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.player-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.player-close-btn {
+  background: none;
+  border: none;
+  color: #c0a060;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 2px 8px;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+  line-height: 1;
+}
+
+.player-close-btn:hover { opacity: 1; }
+
+.player-stage {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  transition: opacity 0.4s ease;
+}
+
+.player-stage.fading { opacity: 0; }
+
+.player-stage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.player-subtitle {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 6px 24px;
+  border-radius: 4px;
+  text-align: center;
+  max-width: 80%;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  white-space: pre-line;
+}
+
+.player-dialogue {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 10px 20px;
+  background: rgba(8, 6, 4, 0.92);
+  border-top: 1px solid rgba(224, 192, 128, 0.18);
+  flex-shrink: 0;
+  min-height: 48px;
+}
+
+.player-dialogue-char {
+  color: #e0c080;
+  font-size: 0.82rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  white-space: nowrap;
+  min-width: 90px;
+  flex-shrink: 0;
+}
+
+.player-dialogue-text {
+  color: #f0e8d0;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.player-controls {
+  padding: 8px 16px 14px;
+  background: rgba(0, 0, 0, 0.8);
+  flex-shrink: 0;
+}
+
+.player-progress-track {
+  height: 3px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 2px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.player-progress-fill {
+  height: 100%;
+  width: 0;
+  background: #e0c080;
+  border-radius: 2px;
+}
+
+.player-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.player-btn {
+  background: none;
+  border: none;
+  color: #c0a060;
+  font-size: 1.35rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  opacity: 0.65;
+  transition: opacity 0.15s;
+  line-height: 1;
+}
+
+.player-btn:hover:not(:disabled) { opacity: 1; }
+.player-btn:disabled { opacity: 0.22; cursor: default; }
+
+.player-btn-main {
+  font-size: 1.75rem;
+  color: #e0c080;
+  opacity: 1;
+}
+
+.player-counter {
+  font-size: 0.85rem;
+  color: #777;
+  min-width: 56px;
+  text-align: center;
+}
+
+/* ── Ken Burns keyframes ──────────────────────────── */
+
+@keyframes kb1 {
+  from { transform: scale(1.0) translate(0%,    0%   ); }
+  to   { transform: scale(1.1) translate(-2%,   -1%  ); }
+}
+@keyframes kb2 {
+  from { transform: scale(1.08) translate(2%,    1%   ); }
+  to   { transform: scale(1.0)  translate(-1.5%, -0.5%); }
+}
+@keyframes kb3 {
+  from { transform: scale(1.0) translate(-1%,   1.5% ); }
+  to   { transform: scale(1.1) translate(1.5%,  -1.5%); }
+}
+@keyframes kb4 {
+  from { transform: scale(1.1) translate(-1.5%, -1%  ); }
+  to   { transform: scale(1.0) translate(0.5%,  0.5% ); }
+}
+
 /* ── Error / loading states ───────────────────────── */
 
 .status-message {

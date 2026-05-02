@@ -17,6 +17,7 @@
       <a class="back-link" href="index.html">← All stories</a>
       <div class="reader-story-title" id="story-title"></div>
       <p class="reader-page-text" id="page-text">Loading…</p>
+      <button class="play-story-btn" id="btn-play" aria-label="Play story">▶ Play Story</button>
       <nav class="reader-nav">
         <button class="nav-btn" id="btn-prev" aria-label="Previous page">‹</button>
         <span class="page-counter" id="page-counter"></span>
@@ -25,6 +26,43 @@
     </div>
 
   </div>
+
+  <!-- ── Player overlay ── -->
+  <div id="player-overlay" class="player-overlay hidden">
+
+    <div class="player-header">
+      <span id="player-story-title" class="player-story-title"></span>
+      <div class="player-header-actions">
+        <button id="btn-player-mute" class="player-close-btn" aria-label="Mute music">🔊</button>
+        <button id="btn-player-close" class="player-close-btn" aria-label="Close player">✕</button>
+      </div>
+    </div>
+    <audio id="player-audio" loop preload="none"></audio>
+
+    <div id="player-stage" class="player-stage">
+      <img id="player-image" src="" alt="Story illustration">
+      <div id="player-subtitle" class="player-subtitle" style="display:none"></div>
+    </div>
+
+    <div id="player-dialogue" class="player-dialogue" style="display:none">
+      <span class="player-dialogue-char"></span>
+      <span class="player-dialogue-text"></span>
+    </div>
+
+    <div class="player-controls">
+      <div class="player-progress-track">
+        <div id="player-progress-fill" class="player-progress-fill"></div>
+      </div>
+      <div class="player-buttons">
+        <button id="btn-player-prev" class="player-btn" aria-label="Previous page">⏮</button>
+        <button id="btn-player-play-pause" class="player-btn player-btn-main" aria-label="Pause">⏸</button>
+        <button id="btn-player-next" class="player-btn" aria-label="Next page">⏭</button>
+        <span id="player-counter" class="player-counter"></span>
+      </div>
+    </div>
+
+  </div>
+
   <script src="js/config.js"></script>
   <script src="js/reader.js"></script>
 </body>

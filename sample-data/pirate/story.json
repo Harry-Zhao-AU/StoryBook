@@ -1,9 +1,37 @@
 {
   "title": "The Pirate Adventure",
+  "music": "music.mp3",
   "pages": [
-    { "image": "page1.png", "text": "Once upon a time, a brave pirate sailed the seven seas in search of adventure." },
-    { "image": "page2.png", "text": "One stormy night, he found a mysterious map hidden inside an old bottle." },
-    { "image": "page3.png", "text": "After many days at sea, he arrived at a tiny island covered in palm trees." },
-    { "image": "page4.png", "text": "He dug up the treasure and shared every golden coin with his crew. The End." }
+    {
+      "image": "page1.png",
+      "text": "Once upon a time, a brave pirate sailed the seven seas in search of adventure.",
+      "duration": 6000
+    },
+    {
+      "image": "page2.png",
+      "text": "One stormy night, he found a mysterious map hidden inside an old bottle.",
+      "dialogue": [
+        { "character": "Captain Jack", "text": "What's this? A map… but where does it lead?" },
+        { "character": "First Mate", "text": "To treasure, Captain — more than you can imagine!" }
+      ],
+      "duration": 7500
+    },
+    {
+      "image": "page3.png",
+      "text": "After many days at sea, he arrived at a tiny island covered in palm trees.",
+      "dialogue": [
+        { "character": "Captain Jack", "text": "Land ahoy! That's the island on the map!" }
+      ],
+      "duration": 6000
+    },
+    {
+      "image": "page4.png",
+      "text": "He dug up the treasure and shared every golden coin with his crew. The End.",
+      "dialogue": [
+        { "character": "Captain Jack", "text": "Every soul gets an equal share. That's the pirate's code!" },
+        { "character": "Crew", "text": "Hurrah for Captain Jack! The finest pirate on the seas!" }
+      ],
+      "duration": 8000
+    }
   ]
 }
