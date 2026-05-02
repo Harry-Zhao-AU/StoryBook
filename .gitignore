@@ -7,3 +7,7 @@ node_modules/
 .superpowers/
 js/config.js
 .worktrees/
+
+# Image generation tool
+output/
+tools/.env
