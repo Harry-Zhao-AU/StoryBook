@@ -6,3 +6,4 @@ Thumbs.db
 node_modules/
 .superpowers/
 js/config.js
+.worktrees/
